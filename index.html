@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lala Gizlilik Politikası · Privacy Policy</title>
+<meta name="description" content="Lala Android uygulamasının gizlilik politikası. Privacy policy of the Lala Android app by PolatTech.">
+<style>
+  :root {
+    --bg: #f7f7f9; --fg: #1b1c22; --muted: #5a5d6b; --line: #dcdde5; --accent: #5b48e0; --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #15161b; --fg: #e8e8ee; --muted: #a3a5b3; --line: #2e3039; --accent: #a594ff; --card: #1d1e25; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 8px; }
+  h2 { font-size: 1.25rem; margin: 36px 0 8px; }
+  h3 { font-size: 1.05rem; margin: 24px 0 6px; }
+  p, li { color: var(--fg); }
+  .meta { color: var(--muted); margin: 0 0 4px; }
+  a { color: var(--accent); }
+  nav.lang { display: flex; gap: 12px; margin: 0 0 24px; }
+  nav.lang a {
+    display: inline-block; padding: 10px 16px; min-height: 44px; border: 1px solid var(--line);
+    border-radius: 999px; text-decoration: none; background: var(--card);
+  }
+  .summary { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 56px 0; }
+  footer { color: var(--muted); font-size: 0.9rem; margin-top: 48px; }
+</style>
+</head>
+<body>
+<main>
+
+<nav class="lang" aria-label="Dil / Language">
+  <a href="#tr" lang="tr">Türkçe</a>
+  <a href="#en" lang="en">English</a>
+</nav>
+
+<!-- ───────────────────────────── TÜRKÇE ───────────────────────────── -->
+<article id="tr" lang="tr">
+<h1>Lala Gizlilik Politikası</h1>
+<p class="meta"><strong>Son güncelleme:</strong> 19 Ekim 2026</p>
+<p class="meta"><strong>Veri sorumlusu:</strong> PolatTech (Lala Android uygulamasının geliştiricisi), Türkiye</p>
+<p class="meta"><strong>İletişim:</strong> <a href="mailto:yusufplt0109@gmail.com">yusufplt0109@gmail.com</a></p>
+
+<h2>1. Kısaca</h2>
+<div class="summary">
+<p>Lala, Android telefonunda çalışan Türkçe bir kişisel asistandır. Temel ilkesi şudur: <strong>varsayılan olarak her
+şey telefonunda kalır; buluta yalnız senin açık izninle çıkılır.</strong> Bizim sunucumuz yoktur: konuşmaların,
+notların, hatırlatıcıların bize gönderilmez. Lala'da hesap açılmaz; kayıt, e-posta ya da parola istenmez. Aşağıda
+hangi verinin nerede durduğu, hangi durumda telefondan çıktığı ve nasıl silindiği yazıyor.</p>
+</div>
+
+<h2>2. Telefonunda kalan veriler</h2>
+<p>Şunlar yalnız telefonunda, şifreli bir veritabanında (SQLCipher; anahtarı Android Keystore korur) saklanır:</p>
+<ul>
+  <li>Sohbet geçmişi (30 gün), sohbet özetleri, Hakkımda bilgilerin (ad, şehir, doğum günü, yakınların) ve "hatırla"
+    dediğin notlar.</li>
+  <li>Hatırlatıcılar, alarmlar, rutinler, alışveriş listesi, alışkanlıklar, kelime kartları ve çalışma sayaçları.</li>
+  <li>Kayıtlı yerler (etiket, adres, koordinat) ve Lala'nın başlattığı yol tariflerinin geçmişi (90 gün).</li>
+  <li>Lala'nın senin adına yaptığı eylemlerin kaydı (30 gün): Ayarlar › Gizlilik ve veriler › Eylem geçmişi.</li>
+  <li>Bağlayıcıların (webhook) adresleri; yetki başlıkları ayrıca şifreli tercihlerde durur.</li>
+</ul>
+<p>Bildirim, ekran, pano ve e-posta içeriği içeren yanıtlar en çok 10 dakika tutulur, sonra silinir. Notların
+Lala'da kopyası tutulmaz: not, telefonunun not uygulamasına gönderilir.</p>
+<p>Yapay zekâ modeli telefonunda çalışır. Modeli indirmeyi seçersen dosya Hugging Face'ten iner; bu sırada Hugging
+Face IP adresini görür.</p>
+
+<h2>3. Mikrofon ve ses</h2>
+<ul>
+  <li><strong>Sesli komut:</strong> söylediğin cümle yazıya çevrilir; ses dosyaya kaydedilmez. Telefonunda cihaz içi
+    ses tanıma varsa o kullanılır ve ses telefondan çıkmaz. Yoksa telefonunun ses tanıma servisi kullanılır (çoğu
+    telefonda Google): bu durumda ses o servise gider ve Lala bunu sana söyler.</li>
+  <li><strong>"Hey Lala" (isteğe bağlı, varsayılan kapalı):</strong> açarsan mikrofon kalıcı bir bildirimle arka
+    planda dinler. Uyandırma sözünün algılanması tamamen telefonda yapılır; uyanana kadar hiçbir ses telefondan
+    çıkmaz.</li>
+  <li><strong>Canlı konuşma (isteğe bağlı, ayrı izin, varsayılan kapalı):</strong> açarsan sesli sohbet sırasında
+    <strong>ham sesin</strong> seçtiğin şirkete (Google ya da OpenAI) gider ve maskelenemez. Komutlar ("alarm kur",
+    "Ahmet'i ara") bu durumda da telefonda yapılır. Kişisel içerik okuyan işler (bildirim, e-posta, ekran) canlı
+    oturuma verilmez. Canlı konuşma açıkken canlı kamerayı da açarsan saniyede bir kamera karesi aynı şirkete gider;
+    kareler Lala'da kaydedilmez ve sohbet belleğine yazılmaz.</li>
+</ul>
+
+<h2>4. Bulut (isteğe bağlı, varsayılan kapalı)</h2>
+<p>Bulutu rıza ekranından açarsan Lala sohbeti, bilgi sorularını ve güncel bilgi sorularını (web aramalı yanıt)
+bulutta yanıtlar; telefonunda model olsa da. Komutların ve dolaylı isteklerin ("biraz sesli bir şey aç") her zaman
+telefonda yorumlanır. Bulut kapalıyken telefondaki model sohbet etmez ve bilgi sorusu yanıtlamaz; yalnız komutları
+yapar.</p>
+<ul>
+  <li><strong>Kime gider:</strong> Lala hesabını kullanıyorsan Google'a (Gemini, Firebase AI Logic üzerinden). Kendi
+    API anahtarını girdiysen anahtarın şirketine: Google (Gemini), Anthropic (Claude) ya da OpenAI (ChatGPT). Kendi
+    anahtarında o şirketle senin aranızdaki koşullar geçerlidir.</li>
+  <li><strong>Ne gider:</strong> yazdığın mesaj, o sohbetin son birkaç mesajı, kısa sohbet özeti ve Hakkımda'dan yalnız
+    adın ve yaşadığın şehir. Güncel bilgi sorusunda yalnız arama sorgusu.</li>
+  <li><strong>Ekran sorusu (ayrı izin):</strong> telefonunda model hazır değilken "ekranda ne var" gibi bir soru
+    sorarsan, ekrandaki yazıların kısa özetinin buluta gönderilip gönderilmeyeceği bir kez sorulur. Kabul edersen
+    yalnız o özet gider (düğme adları, saat ve reklam yazıları çıkarılmış hâlde); sağlık, kimlik, banka ya da adres
+    bilgisi geçen ekran hiç gönderilmez. Banka ve cüzdan uygulamaları ile parola alanları zaten okunmaz. Ayarlar ›
+    Bulut'tan kapatabilirsin.</li>
+  <li><strong>Ne ASLA gitmez:</strong> uzun süreli bellek; bildirim, pano ve e-posta içeriği; konum; rehber; doğum
+    günün ve yakınların; akıllı ev cihaz adları. Telefon numarası, e-posta adresi, IBAN, kimlik numarası ve kart
+    numarası gönderilmeden önce maskelenir.</li>
+  <li><strong>Uygulama doğrulaması:</strong> Lala hesabıyla bulut kullanıldığında, isteğin gerçek Lala uygulamasından
+    geldiğini kanıtlamak için Google Play Integrity / Firebase App Check'ten bir doğrulama jetonu alınır. Bu jeton
+    cihaz ve uygulama bütünlüğünü bildirir; sohbet içeriği taşımaz.</li>
+  <li>Her Lala yanıtının altında nerede üretildiği yazar: "Cihazda" ya da "Bulutta".</li>
+</ul>
+
+<h2>5. Telefondan çıkan diğer veriler</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Ne zaman</th><th>Ne gider</th><th>Kime</th></tr></thead>
+  <tbody>
+    <tr><td>Hava durumu sorduğunda</td><td>Yaklaşık 1 km'ye yuvarlanmış konum</td><td>MET Norway</td></tr>
+    <tr><td>Döviz ya da haber sorduğunda</td><td>Yalnız istek (kişisel veri yok)</td><td>T.C. Merkez Bankası; Anadolu Ajansı, BBC Türkçe, NTV RSS yayınları</td></tr>
+    <tr><td>Adres aradığında, yer kaydettiğinde</td><td>Adres metni</td><td>Telefonun adres servisi (çoğu telefonda Google)</td></tr>
+    <tr><td>"Ne zaman çıkmalıyım" dediğinde, etkinliğin yeri kayıtlı yerlerinde yoksa</td><td>Takvimdeki etkinliğin yer metni</td><td>Telefonun adres servisi (çoğu telefonda Google)</td></tr>
+    <tr><td>Yol tarifi, yer etiketi</td><td>Hedef ya da etiket</td><td>Seçtiğin harita uygulaması</td></tr>
+    <tr><td>Arama, SMS, WhatsApp mesajı</td><td>Senin söylediğin kişi ve mesaj</td><td>İlgili uygulama (mesajı o uygulama gönderir; gönder düğmesine erişilebilirlik izniyle Lala basar)</td></tr>
+    <tr><td>"YouTube'da … aç"</td><td>Arama sözü</td><td>YouTube</td></tr>
+    <tr><td>Google hesabını bağladıysan</td><td>Gmail okuma ve taslak, Görevler istekleri</td><td>Google (e-posta içeriği telefonda işlenir, buluttaki modele gitmez; Lala jeton saklamaz)</td></tr>
+    <tr><td>Google Home'u bağladıysan</td><td>Aç, kapat, parlaklık, sıcaklık komutları</td><td>Google</td></tr>
+    <tr><td>Bağlayıcı çalıştırdığında</td><td>Senin tanımladığın istek (her seferinde onayınla)</td><td>Senin girdiğin HTTPS adresi</td></tr>
+    <tr><td>Çeviri, görselden yazı ve karekod okuma</td><td>Metin ve görsel gitmez; kitaplığın kullanım ve başarım ölçümleri gider</td><td>Google (ML Kit)</td></tr>
+    <tr><td>Anonim kullanım verisini açtıysan (varsayılan kapalı)</td><td>Çökme raporu ve kişisel veri içermeyen kullanım olayları</td><td>Google (Firebase)</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Fotoğraflar, fotoğraftan okunan yazı ve "bu fotoğrafta ne var" dediğinde telefondaki modelin yaptığı anlatım yalnız
+telefonunda işlenir. Yol süresi tahmini telefonda hesaplanır; konumun bunun için hiçbir servise gitmez.</p>
+<p><strong>Bilgisayar köprüsü (isteğe bağlı):</strong> köprüyü açtığında yazdıkların ve Lala'nın yanıtları, aynı
+Wi-Fi üzerinden <strong>şifrelenmeden</strong> kendi bilgisayarındaki tarayıcıya gider; internete çıkmaz. Aynı ağdaki
+başka biri bu trafiği görebilir; köprüyü yalnız güvendiğin ağda aç. Köprü yalnız Lala ekrandayken açık kalır (Lala'dan
+çıkınca ya da telefon kilitlenince bir dakika içinde kapanır); bildirim, ekran, pano ve e-posta içeriği köprüden
+gönderilmez.</p>
+
+<h2>6. İzinler</h2>
+<p>Lala her izni yalnız ilgili işi istediğinde ister; vermediğin izin yalnız o işi kapatır.</p>
+<ul>
+  <li><strong>Mikrofon:</strong> sesli komut, "Hey Lala", canlı konuşma.</li>
+  <li><strong>Rehber, telefon, SMS:</strong> söylediğin kişiyi bulma, arama başlatma, gelen aramayı yönetme, mesaj
+    taslağı.</li>
+  <li><strong>Takvim:</strong> etkinlik okuma ve ekleme, toplantı önerileri, gün özeti.</li>
+  <li><strong>Konum:</strong> hava durumu, konumlu hatırlatıcı ve rutin, "burayı kaydet", çıkış saati. Arka planda
+    konum yalnız konumlu hatırlatıcı ve rutin kurduysan, coğrafi çit için kullanılır.</li>
+  <li><strong>Bildirimler ve alarmlar:</strong> hatırlatıcı, alarm ve sessiz öneriler.</li>
+  <li><strong>Bildirim erişimi (isteğe bağlı):</strong> bildirimleri sesli okuma, bildirime yanıt ve WhatsApp gibi
+    internet aramalarını sesle cevaplama / reddetme (arama bildirimindeki düğmeyle). İçerik telefonda kalır.</li>
+  <li><strong>Erişilebilirlik hizmeti (isteğe bağlı):</strong> ekrandaki yazıyı sorduğunda okuma; senin komutunla
+    başka uygulamada düğmeye ya da satıra basma (WhatsApp'ta gönder veya sohbete gir, arama sonucuna gir, harita
+    etiketi, ayar anahtarı). Ekran içeriği telefonda kalır; yalnız yukarıdaki ekran sorusu iznini verdiysen ve
+    telefonda model yokken kısa özeti buluta gider.</li>
+  <li><strong>Kamera (isteğe bağlı):</strong> yalnız "Canlı kamera"yı açarsan. Görüntü telefondaki modelle işlenir ve
+    kaydedilmez; tek istisna canlı konuşma iznini verdiysen buluttaki canlı kameradır (3. bölüm).</li>
+</ul>
+
+<h2>7. Saklama ve silme</h2>
+<ul>
+  <li>Sohbet turları 30 gün, hassas turlar 10 dakika, eylem kaydı 30 gün, yol tarifi geçmişi 90 gün saklanır.</li>
+  <li>Tek bir sohbeti Sohbet geçmişi'nden, hakkındaki bir bilgiyi ya da notu Hakkımda'dan silebilirsin.</li>
+  <li><strong>Ayarlar › Gizlilik ve veriler › Tüm verileri sil</strong> telefondaki bütün Lala verisini siler ve bulut
+    iznini geri alır.</li>
+  <li>Uygulamayı kaldırmak telefondaki bütün veriyi siler. Şifreli veritabanı bulut yedeğine alınmaz.</li>
+  <li>Bulut şirketlerine ve Google'a gönderilmiş veriler o şirketlerin saklama koşullarına tabidir; Lala bunları
+    silemez.</li>
+</ul>
+
+<h2>8. Yaş sınırı</h2>
+<p>Lala 18 yaş ve üzeri kullanıcılar içindir. 18 yaşından küçüklere yönelik değildir ve bilerek onlardan veri toplamaz.
+18 yaşından küçük birinin Lala üzerinden buluta veri gönderdiğini düşünüyorsan iletişim adresine yaz.</p>
+
+<h2>9. Hakların</h2>
+<p>KVKK'nın 11. maddesi (ve geçerli olduğu yerde AB GDPR) kapsamında verilerin hakkında bilgi isteme, düzeltme ve silme haklarına sahipsin. Lala'nın
+verileri telefonunda durduğu için çoğunu uygulamanın içinden kendin görebilir ve silebilirsin; diğer taleplerin için
+yukarıdaki iletişim adresine yaz.</p>
+
+<h2>10. Değişiklikler</h2>
+<p>Bu politika değişirse sayfadaki tarih güncellenir. Buluta giden veriyi genişleten bir değişiklikte uygulama rızanı
+yeniden ister.</p>
+</article>
+
+<hr>
+
+<!-- ───────────────────────────── ENGLISH ───────────────────────────── -->
+<article id="en" lang="en">
+<h1>Lala Privacy Policy</h1>
+<p class="meta"><strong>Last updated:</strong> 19 October 2026</p>
+<p class="meta"><strong>Data controller:</strong> PolatTech (developer of the Lala Android app), Türkiye</p>
+<p class="meta"><strong>Contact:</strong> <a href="mailto:yusufplt0109@gmail.com">yusufplt0109@gmail.com</a></p>
+<p class="meta">This is a translation. If the two versions differ, the Turkish version prevails.</p>
+
+<h2>1. In short</h2>
+<div class="summary">
+<p>Lala is a Turkish-language personal assistant that runs on your Android phone. Its core principle: <strong>by
+default everything stays on your phone; data goes to the cloud only with your explicit consent.</strong> We operate no
+servers: your conversations, notes and reminders are never sent to us. Lala has no accounts; it does not ask for
+registration, an email address or a password. Below you can read what data is stored where, when it leaves your phone
+and how to delete it.</p>
+</div>
+
+<h2>2. Data that stays on your phone</h2>
+<p>The following is stored only on your phone, in an encrypted database (SQLCipher; its key is protected by the
+Android Keystore):</p>
+<ul>
+  <li>Chat history (30 days), conversation summaries, your "About me" details (name, city, birthday, people close to
+    you) and notes you asked Lala to remember.</li>
+  <li>Reminders, alarms, routines, shopping list, habits, flashcards and study timers.</li>
+  <li>Saved places (label, address, coordinates) and the history of directions Lala started (90 days).</li>
+  <li>A log of actions Lala performed on your behalf (30 days): Settings › Privacy and data › Action history.</li>
+  <li>Connector (webhook) addresses; their authorization headers are kept separately in encrypted preferences.</li>
+</ul>
+<p>Replies containing notification, screen, clipboard or email content are kept for at most 10 minutes and then
+deleted. Lala keeps no copy of your notes: a note is handed to your phone's notes app.</p>
+<p>The AI model runs on your phone. If you choose to download the model, the file comes from Hugging Face, which sees
+your IP address during the download.</p>
+
+<h2>3. Microphone and voice</h2>
+<ul>
+  <li><strong>Voice commands:</strong> what you say is converted to text; audio is not saved to a file. If your phone
+    has on-device speech recognition, it is used and audio does not leave the phone. Otherwise your phone's speech
+    recognition service is used (Google on most phones): audio then goes to that service, and Lala tells you so.</li>
+  <li><strong>"Hey Lala" (optional, off by default):</strong> if enabled, the microphone listens in the background
+    with a persistent notification. Wake-word detection runs entirely on the phone; no audio leaves the phone until
+    Lala wakes up.</li>
+  <li><strong>Live conversation (optional, separate consent, off by default):</strong> if enabled, your <strong>raw
+    voice</strong> is sent during voice chat to the company you chose (Google or OpenAI) and cannot be masked.
+    Commands ("set an alarm", "call Ahmet") are still carried out on the phone. Tasks that read personal content
+    (notifications, email, screen) are never given to the live session. If you also turn on the live camera during a
+    live conversation, one camera frame per second goes to the same company; frames are not saved by Lala and are not
+    written to chat memory.</li>
+</ul>
+
+<h2>4. Cloud (optional, off by default)</h2>
+<p>If you turn on the cloud from the consent screen, Lala answers chat, knowledge questions and current-events
+questions (answers with web search) in the cloud, even if a model is on your phone. Your commands and indirect requests
+("play something upbeat") are always interpreted on the phone. With the cloud off, the on-phone model does not chat or
+answer knowledge questions; it only carries out commands.</p>
+<ul>
+  <li><strong>Where it goes:</strong> with the Lala account, to Google (Gemini, via Firebase AI Logic). If you entered
+    your own API key, to that key's company: Google (Gemini), Anthropic (Claude) or OpenAI (ChatGPT). With your own
+    key, the terms between you and that company apply.</li>
+  <li><strong>What is sent:</strong> your message, the last few messages of that conversation, a short conversation
+    summary, and from "About me" only your name and city. For current-events questions, only the search query.</li>
+  <li><strong>Screen questions (separate consent):</strong> if you ask something like "what's on my screen" while the
+    on-phone model isn't ready, Lala asks once whether a short summary of the on-screen text may be sent to the cloud.
+    If you agree, only that summary is sent (with button labels, clock and ad text removed); a screen mentioning
+    health, identity, banking or address information is never sent. Banking and wallet apps and password fields are
+    never read. You can turn this off in Settings › Cloud.</li>
+  <li><strong>What is NEVER sent:</strong> long-term memory; notification, clipboard and email content; location;
+    contacts; your birthday and close relations; smart-home device names. Phone numbers, email addresses, IBANs,
+    national ID numbers and card numbers are masked before sending.</li>
+  <li><strong>App verification:</strong> when the cloud is used with the Lala account, a verification token is
+    obtained from Google Play Integrity / Firebase App Check to prove the request comes from the genuine Lala app. The
+    token reports device and app integrity; it carries no chat content.</li>
+  <li>Every Lala reply is labelled with where it was produced: "On device" or "In the cloud".</li>
+</ul>
+
+<h2>5. Other data that leaves your phone</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>When</th><th>What is sent</th><th>To whom</th></tr></thead>
+  <tbody>
+    <tr><td>You ask about the weather</td><td>Location rounded to about 1 km</td><td>MET Norway</td></tr>
+    <tr><td>You ask about exchange rates or news</td><td>Only the request (no personal data)</td><td>Central Bank of the Republic of Türkiye; Anadolu Agency, BBC Türkçe, NTV RSS feeds</td></tr>
+    <tr><td>You search for an address or save a place</td><td>Address text</td><td>Your phone's geocoding service (Google on most phones)</td></tr>
+    <tr><td>"When should I leave", if the event's place isn't among your saved places</td><td>The event's location text from your calendar</td><td>Your phone's geocoding service (Google on most phones)</td></tr>
+    <tr><td>Directions, place labels</td><td>Destination or label</td><td>The maps app you selected</td></tr>
+    <tr><td>Calls, SMS, WhatsApp messages</td><td>The contact and message you dictated</td><td>The relevant app (that app sends the message; Lala presses the send button using the accessibility permission)</td></tr>
+    <tr><td>"Play … on YouTube"</td><td>The search phrase</td><td>YouTube</td></tr>
+    <tr><td>If you connected your Google account</td><td>Gmail reading and drafts, Tasks requests</td><td>Google (email content is processed on the phone and never sent to the cloud model; Lala stores no tokens)</td></tr>
+    <tr><td>If you connected Google Home</td><td>On, off, brightness, temperature commands</td><td>Google</td></tr>
+    <tr><td>You run a connector</td><td>The request you defined (with your confirmation every time)</td><td>The HTTPS address you entered</td></tr>
+    <tr><td>Translation, text and QR code recognition from images</td><td>No text or images are sent; the library's usage and performance metrics are</td><td>Google (ML Kit)</td></tr>
+    <tr><td>If you turned on anonymous usage data (off by default)</td><td>Crash reports and usage events without personal data</td><td>Google (Firebase)</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Photos, text read from photos, and the description the on-phone model gives when you ask "what's in this photo"
+are processed only on your phone. Travel-time estimates are computed on the phone; your location is not sent to any
+service for them.</p>
+<p><strong>Computer bridge (optional):</strong> when you turn on the bridge, what you type and Lala's replies travel
+<strong>unencrypted</strong> over the same Wi-Fi network to the browser on your own computer; they do not go to the
+internet. Someone else on the same network could see this traffic, so use the bridge only on a network you trust. The
+bridge stays on only while Lala is on screen (it closes within a minute after you leave Lala or lock the phone);
+notification, screen, clipboard and email content is never sent over the bridge.</p>
+
+<h2>6. Permissions</h2>
+<p>Lala asks for each permission only when a related task needs it; a permission you deny only disables that task.</p>
+<ul>
+  <li><strong>Microphone:</strong> voice commands, "Hey Lala", live conversation.</li>
+  <li><strong>Contacts, phone, SMS:</strong> finding the person you name, placing calls, handling incoming calls,
+    message drafts.</li>
+  <li><strong>Calendar:</strong> reading and adding events, meeting suggestions, daily summary.</li>
+  <li><strong>Location:</strong> weather, location-based reminders and routines, "save this place", departure time.
+    Background location is used only for geofences, and only if you set up a location-based reminder or routine.</li>
+  <li><strong>Notifications and alarms:</strong> reminders, alarms and quiet suggestions.</li>
+  <li><strong>Notification access (optional):</strong> reading notifications aloud, replying to notifications, and
+    answering / declining internet calls such as WhatsApp by voice (using the call notification's button). Content
+    stays on the phone.</li>
+  <li><strong>Accessibility service (optional):</strong> reading on-screen text when you ask; pressing a button or row
+    in another app on your command (send or open a chat in WhatsApp, open a search result, map labels, settings
+    toggles). Screen content stays on the phone; only a short summary goes to the cloud, and only if you granted the
+    screen-question consent above and no on-phone model is available.</li>
+  <li><strong>Camera (optional):</strong> only if you open "Live camera". Images are processed by the on-phone model
+    and not saved; the only exception is the cloud live camera if you granted live-conversation consent (section 3).</li>
+</ul>
+
+<h2>7. Retention and deletion</h2>
+<ul>
+  <li>Chat turns are kept for 30 days, sensitive turns for 10 minutes, the action log for 30 days, and directions
+    history for 90 days.</li>
+  <li>You can delete a single conversation in Chat history, and a detail or note about you in "About me".</li>
+  <li><strong>Settings › Privacy and data › Delete all data</strong> deletes all Lala data on the phone and withdraws
+    cloud consent.</li>
+  <li>Uninstalling the app deletes all data on the phone. The encrypted database is excluded from cloud backups.</li>
+  <li>Data already sent to cloud companies and Google is subject to their retention terms; Lala cannot delete it.</li>
+</ul>
+
+<h2>8. Age requirement</h2>
+<p>Lala is intended for users aged 18 and over. It is not directed at anyone under 18 and does not knowingly collect
+data from them. If you believe someone under 18 has sent data to the cloud through Lala, please contact us at the
+address above.</p>
+
+<h2>9. Your rights</h2>
+<p>Under Article 11 of Türkiye's Personal Data Protection Law (KVKK) — and, where applicable, the EU GDPR — you have
+the right to request information about, correction of and deletion of your data. Because Lala's data lives on your
+phone, you can view and delete most of it yourself inside the app; for any other request, write to the contact
+address above.</p>
+
+<h2>10. Changes</h2>
+<p>If this policy changes, the date on this page is updated. For any change that expands the data sent to the cloud,
+the app asks for your consent again.</p>
+</article>
+
+<footer>
+  <p>Lala · PolatTech · <a href="mailto:yusufplt0109@gmail.com">yusufplt0109@gmail.com</a></p>
+</footer>
+
+</main>
+</body>
+</html>
