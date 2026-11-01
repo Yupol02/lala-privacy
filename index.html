@@ -49,14 +49,15 @@
 <!-- ───────────────────────────── TÜRKÇE ───────────────────────────── -->
 <article id="tr" lang="tr">
 <h1>Lala Gizlilik Politikası</h1>
-<p class="meta"><strong>Son güncelleme:</strong> 24 Ekim 2026</p>
+<p class="meta"><strong>Son güncelleme:</strong> 1 Kasım 2026</p>
 <p class="meta"><strong>Veri sorumlusu:</strong> PolatTech (Lala Android uygulamasının geliştiricisi), Türkiye</p>
 <p class="meta"><strong>İletişim:</strong> <a href="mailto:yusufplt0109@gmail.com">yusufplt0109@gmail.com</a></p>
 
 <h2>1. Kısaca</h2>
 <div class="summary">
-<p>Lala, Android telefonunda çalışan Türkçe bir kişisel asistandır. Temel ilkesi şudur: <strong>varsayılan olarak her
-şey telefonunda kalır; buluta yalnız senin açık izninle çıkılır.</strong> Bizim sunucumuz yoktur: konuşmaların,
+<p>Lala, Android telefonunda çalışan Türkçe bir kişisel asistandır. Temel ilkesi şudur: <strong>verilerin telefonunda
+kalır; sohbet buluta yalnız senin açık izninle çıkar.</strong> Tek varsayılan istisna sesli giriştir: internet varken
+sesin, yazıya çevrilmek üzere telefonunun ses tanıma servisine gider; bunu Ayarlar'dan kapatabilirsin (bölüm 3). Bizim sunucumuz yoktur: konuşmaların,
 notların, hatırlatıcıların bize gönderilmez. Lala'da hesap açılmaz; kayıt, e-posta ya da parola istenmez. Aşağıda
 hangi verinin nerede durduğu, hangi durumda telefondan çıktığı ve nasıl silindiği yazıyor.</p>
 </div>
@@ -78,9 +79,12 @@ Face IP adresini görür.</p>
 
 <h2>3. Mikrofon ve ses</h2>
 <ul>
-  <li><strong>Sesli komut:</strong> söylediğin cümle yazıya çevrilir; ses dosyaya kaydedilmez. Telefonunda cihaz içi
-    ses tanıma varsa o kullanılır ve ses telefondan çıkmaz. Yoksa telefonunun ses tanıma servisi kullanılır (çoğu
-    telefonda Google): bu durumda ses o servise gider ve Lala bunu sana söyler.</li>
+  <li><strong>Sesli komut ve sesli soru:</strong> söylediğin cümle yazıya çevrilir; ses dosyaya kaydedilmez. İnternet
+    varken ses, yazıya çevrilmek üzere telefonunun ses tanıma servisine gider (çoğu telefonda Google) ve Lala bunu sana
+    bir kez söyler; o servisin koşulları geçerlidir. Rehberin bu servise verilmez; söylediğin ad sesinle birlikte gider. İnternet yokken ya da
+    Ayarlar › Ses ve uyandırma'dan "Yüksek doğruluklu tanıma"yı kapatırsan, Türkçe paketi kurulu cihaz içi ses tanıma
+    kullanılır ve ses telefondan çıkmaz. Telefonunda cihaz içi tanıma yoksa ses yine servise gider. "Hey Lala" dedikten
+    hemen sonraki söz, sözün başı düşmesin diye internet varken de telefonda çevrilir.</li>
   <li><strong>"Hey Lala" (isteğe bağlı, varsayılan kapalı):</strong> açarsan mikrofon kalıcı bir bildirimle arka
     planda dinler. Uyandırma sözünün algılanması tamamen telefonda yapılır; uyanana kadar hiçbir ses telefondan
     çıkmaz.</li>
@@ -109,6 +113,8 @@ yapar.</p>
     Bulut'tan kapatabilirsin.</li>
   <li><strong>Öğretmen ve kaynaklar (ayrı izin):</strong> Öğren'de seçtiğin kaynaklarla ders aldığında ya da kart, sınav veya çalışma kılavuzu istediğinde, kaynakların metninin buluta gönderilip gönderilmeyeceği bir kez sorulur. Kabul edersen seçtiğin kaynakların metninin tamamı (çok uzun kaynakta soruyla ilgili sayfalar; numaralar maskeli) ve o dersteki yazdıkların gider; kimlik, banka ya da parola sözü geçen sayfa hiç gönderilmez. Bu izin açıkken kartları, sınav sorularını ve çalışma kılavuzunu bulut yazar; kapalıyken kartı ve sınavı telefondaki model yazar. Ders sohbet geçmişine ve uzun süreli belleğe yazılmaz. Ayarlar › Bulut'tan kapatabilirsin. PDF'lerin telefonda okunur ve saklanır.</li>
   <li><strong>Konuşma pratiği:</strong> Öğren'deki "Konuş" kipi canlı konuşmayla olur; bu izin ve canlı konuşma izni ikisi de açık olmalı. Sesin canlı olarak şirkete gider, kaynaklarının maskeli metninden bir bölüm (en çok 24.000 harf) de oturuma eklenir. Konuşma kaydedilmez ve sohbet geçmişine yazılmaz.</li>
+  <li><strong>Okuma sesi:</strong> bulut açıkken bulutun yanıtı ve Lala'nın sabit, yer tutucusuz hazır cümleleri Gemini TTS ile okunur. Hazır cümlelerin sesi bir kez üretilip telefonda saklanır. Telefonun ürettiği değişkenli metin, bildirim, e-posta ve ekran içeriği buluta gitmez; telefondaki sabit sesle okunur. Claude ve ChatGPT anahtarında bu yol yoktur.</li>
+  <li><strong>Sahte arama:</strong> &quot;Sahte aramada konuşma&quot; ve canlı konuşma izni açıksa arama cevaplanınca arayan bulutta canlı konuşur. Sesin canlı olarak şirkete gider; arayan adı ve yazdığın senaryo maskeli gider. Profil, geçmiş ve araç verilmez; konuşma kaydedilmez ve sohbet geçmişine yazılmaz. Senaryo telefonda şifreli saklanır.</li>
   <li><strong>Ne ASLA gitmez:</strong> uzun süreli bellek; bildirim, pano ve e-posta içeriği; konum; rehber; doğum
     günün ve yakınların; akıllı ev cihaz adları; PDF'lerin (öğretmen izniyle seçtiğin kaynaklar dışında), kartların ve
     sınav sonuçların. Telefon numarası, e-posta adresi, IBAN, kimlik numarası ve kart
@@ -124,6 +130,7 @@ yapar.</p>
 <table>
   <thead><tr><th>Ne zaman</th><th>Ne gider</th><th>Kime</th></tr></thead>
   <tbody>
+    <tr><td>İnternet varken sesli konuştuğunda ("Yüksek doğruluklu tanıma" açıksa; varsayılan açık)</td><td>Sesin (rehberin verilmez)</td><td>Telefonun ses tanıma servisi (çoğu telefonda Google)</td></tr>
     <tr><td>Hava durumu sorduğunda</td><td>Yaklaşık 1 km'ye yuvarlanmış konum</td><td>MET Norway</td></tr>
     <tr><td>Döviz ya da haber sorduğunda</td><td>Yalnız istek (kişisel veri yok)</td><td>T.C. Merkez Bankası; Anadolu Ajansı, BBC Türkçe, NTV RSS yayınları</td></tr>
     <tr><td>Adres aradığında, yer kaydettiğinde</td><td>Adres metni</td><td>Telefonun adres servisi (çoğu telefonda Google)</td></tr>
@@ -198,16 +205,17 @@ yeniden ister.</p>
 <!-- ───────────────────────────── ENGLISH ───────────────────────────── -->
 <article id="en" lang="en">
 <h1>Lala Privacy Policy</h1>
-<p class="meta"><strong>Last updated:</strong> 19 October 2026</p>
+<p class="meta"><strong>Last updated:</strong> 1 November 2026</p>
 <p class="meta"><strong>Data controller:</strong> PolatTech (developer of the Lala Android app), Türkiye</p>
 <p class="meta"><strong>Contact:</strong> <a href="mailto:yusufplt0109@gmail.com">yusufplt0109@gmail.com</a></p>
 <p class="meta">This is a translation. If the two versions differ, the Turkish version prevails.</p>
 
 <h2>1. In short</h2>
 <div class="summary">
-<p>Lala is a Turkish-language personal assistant that runs on your Android phone. Its core principle: <strong>by
-default everything stays on your phone; data goes to the cloud only with your explicit consent.</strong> We operate no
-servers: your conversations, notes and reminders are never sent to us. Lala has no accounts; it does not ask for
+<p>Lala is a Turkish-language personal assistant that runs on your Android phone. Its core principle: <strong>your data
+stays on your phone; chat goes to the cloud only with your explicit consent.</strong> The one default exception is voice
+input: when you are online, your voice goes to your phone's speech recognition service for conversion to text; you can
+turn this off in Settings (section 3). We operate no servers: your conversations, notes and reminders are never sent to us. Lala has no accounts; it does not ask for
 registration, an email address or a password. Below you can read what data is stored where, when it leaves your phone
 and how to delete it.</p>
 </div>
@@ -230,9 +238,14 @@ your IP address during the download.</p>
 
 <h2>3. Microphone and voice</h2>
 <ul>
-  <li><strong>Voice commands:</strong> what you say is converted to text; audio is not saved to a file. If your phone
-    has on-device speech recognition, it is used and audio does not leave the phone. Otherwise your phone's speech
-    recognition service is used (Google on most phones): audio then goes to that service, and Lala tells you so.</li>
+  <li><strong>Voice commands and questions:</strong> what you say is converted to text; audio is not saved to a file.
+    When you are online, audio goes to your phone's speech recognition service for conversion (Google on most phones),
+    and Lala tells you so once; that service's terms apply. Your contact list is not given to this service; a name you
+    say goes with your voice. When you
+    are offline, or if you turn off "High-accuracy recognition" in Settings › Voice and wake word, on-device speech
+    recognition with the Turkish pack is used and audio does not leave the phone. If your phone has no on-device
+    recognition, audio still goes to the service. What you say right after "Hey Lala" is converted on the phone even
+    when you are online, so the start of the sentence isn't lost.</li>
   <li><strong>"Hey Lala" (optional, off by default):</strong> if enabled, the microphone listens in the background
     with a persistent notification. Wake-word detection runs entirely on the phone; no audio leaves the phone until
     Lala wakes up.</li>
@@ -274,6 +287,7 @@ answer knowledge questions; it only carries out commands.</p>
 <table>
   <thead><tr><th>When</th><th>What is sent</th><th>To whom</th></tr></thead>
   <tbody>
+    <tr><td>You speak while online (with "High-accuracy recognition" on; on by default)</td><td>Your voice (your contact list is not given)</td><td>Your phone's speech recognition service (Google on most phones)</td></tr>
     <tr><td>You ask about the weather</td><td>Location rounded to about 1 km</td><td>MET Norway</td></tr>
     <tr><td>You ask about exchange rates or news</td><td>Only the request (no personal data)</td><td>Central Bank of the Republic of Türkiye; Anadolu Agency, BBC Türkçe, NTV RSS feeds</td></tr>
     <tr><td>You search for an address or save a place</td><td>Address text</td><td>Your phone's geocoding service (Google on most phones)</td></tr>
