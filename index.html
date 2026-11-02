@@ -49,7 +49,7 @@
 <!-- ───────────────────────────── TÜRKÇE ───────────────────────────── -->
 <article id="tr" lang="tr">
 <h1>Lala Gizlilik Politikası</h1>
-<p class="meta"><strong>Son güncelleme:</strong> 1 Kasım 2026</p>
+<p class="meta"><strong>Son güncelleme:</strong> 2 Kasım 2026</p>
 <p class="meta"><strong>Veri sorumlusu:</strong> PolatTech (Lala Android uygulamasının geliştiricisi), Türkiye</p>
 <p class="meta"><strong>İletişim:</strong> <a href="mailto:yusufplt0109@gmail.com">yusufplt0109@gmail.com</a></p>
 
@@ -70,8 +70,25 @@ hangi verinin nerede durduğu, hangi durumda telefondan çıktığı ve nasıl s
   <li>Hatırlatıcılar, alarmlar, rutinler, alışveriş listesi, alışkanlıklar, kelime kartları ve çalışma sayaçları.</li>
   <li>Kayıtlı yerler (etiket, adres, koordinat) ve Lala'nın başlattığı yol tariflerinin geçmişi (90 gün).</li>
   <li>Lala'nın senin adına yaptığı eylemlerin kaydı (30 gün): Ayarlar › Gizlilik ve veriler › Eylem geçmişi.</li>
-  <li>Bağlayıcıların (webhook) adresleri; yetki başlıkları ayrıca şifreli tercihlerde durur.</li>
+  <li>Bağlayıcıların (Home Assistant, Notion, web servisi, SSH sunucusu) adresleri, istek ve komut şablonları,
+    tetik cümleleri ve SSH sunucusunun ilk bağlantıda sabitlenen parmak izi. Erişim anahtarları, ek başlıklar ve bu
+    telefonun SSH anahtarı ayrıca şifreli tercihlerde durur; SSH anahtarının gizli yarısı telefondan çıkmaz.</li>
+  <li>Bağlam hafızası (her kaynak ayrı açılır, hepsi varsayılan kapalı; 90 gün): Lala'yı kullanırken görülen yerler
+    (yaklaşık 200 metrelik alanın merkezi; arka planda konum okunmaz), hangi uygulamayı günde ne kadar kullandığın
+    (uygulama adı ve süre; içerik yok), Health Connect'ten günlük adım ve uyku saatleri, saat başı gelen bildirim
+    sayısı (uygulama adı ve içerik yok) ve bunlardan telefonda çıkarılan düzen (sık gidilen yerler, çalışma saatleri,
+    ortalama uyku, adım ve ekran süresi).</li>
 </ul>
+<p>Bağlam hafızası hiçbir sunucuya, buluttaki yapay zekâya ya da analiz hizmetine gönderilmez. Sabah özetini açarsan
+(varsayılan kapalı; kulaklığı ilk taktığında bir kez sorulur) Lala sabah 08.00–11.00 arasında kulaklık takıldığında
+takvimindeki sıradaki etkinliği, yola bırakman gereken payı ve uykunu yalnız kulaklıktan sesli okur; yol süresi kayıtlı
+"Ev"den kuş uçuşu tahmindir, trafik verisi kullanılmaz.</p>
+<p><strong>Health Connect verileri:</strong> Lala Health Connect'ten yalnız adım sayısını ve uyku oturumlarının başlangıç
+ve bitişini OKUR; Health Connect'e hiçbir şey yazmaz. Bu veriler yalnız sabah özetinde ve Bağlam hafızası sayfasında
+sana gösterilmek için kullanılır, telefonda şifreli olarak 90 gün tutulur, kimseyle paylaşılmaz, satılmaz, buluta
+gönderilmez, reklam, kredi, sigorta ya da işe alım kararları için kullanılmaz. Ayarlar › Gizlilik ve veriler ›
+Bağlam hafızası'ndan silebilir, izni Health Connect'ten geri alabilirsin. Lala yalnız uygulama açıkken okur; arka
+planda okuma izni istemez.</p>
 <p>Bildirim, ekran, pano ve e-posta içeriği içeren yanıtlar en çok 10 dakika tutulur, sonra silinir. Notların
 Lala'da kopyası tutulmaz: not, telefonunun not uygulamasına gönderilir.</p>
 <p>Yapay zekâ modeli telefonunda çalışır. Modeli indirmeyi seçersen dosya Hugging Face'ten iner; bu sırada Hugging
@@ -141,7 +158,10 @@ yapar.</p>
     <tr><td>Öğren'de "NotebookLM'de aç" (onayınla)</td><td>PDF dosyasının tamamı</td><td>Google'ın NotebookLM uygulaması (Lala NotebookLM'e bağlanmaz; dosyayı paylaş menüsü gibi ona verir)</td></tr>
     <tr><td>Google hesabını bağladıysan</td><td>Gmail okuma ve taslak, Görevler istekleri</td><td>Google (e-posta içeriği telefonda işlenir, buluttaki modele gitmez; Lala jeton saklamaz)</td></tr>
     <tr><td>Google Home'u bağladıysan</td><td>Aç, kapat, parlaklık, sıcaklık komutları</td><td>Google</td></tr>
-    <tr><td>Bağlayıcı çalıştırdığında</td><td>Senin tanımladığın istek (her seferinde onayınla)</td><td>Senin girdiğin HTTPS adresi</td></tr>
+    <tr><td>Bağlayıcı çalıştırdığında (her seferinde onayınla)</td><td>Senin tanımladığın istek ve söylediğin alan
+      değeri (ör. Notion'a eklenecek görev); SSH'ta kaydettiğin komut. Yanıt ve komut çıktısı telefonda kalır, buluttaki
+      modele gitmez</td><td>Senin girdiğin HTTPS adresi (Home Assistant dahil; Lala şifresiz http'ye bağlanmaz);
+      SSH'ta senin sunucun (şifreli bağlantı)</td></tr>
     <tr><td>Çeviri, görselden yazı ve karekod okuma</td><td>Metin ve görsel gitmez; kitaplığın kullanım ve başarım ölçümleri gider</td><td>Google (ML Kit)</td></tr>
     <tr><td>Anonim kullanım verisini açtıysan (varsayılan kapalı)</td><td>Çökme raporu ve kişisel veri içermeyen kullanım olayları</td><td>Google (Firebase)</td></tr>
   </tbody>
@@ -149,11 +169,6 @@ yapar.</p>
 </div>
 <p>Fotoğraflar, fotoğraftan okunan yazı ve "bu fotoğrafta ne var" dediğinde telefondaki modelin yaptığı anlatım yalnız
 telefonunda işlenir. Yol süresi tahmini telefonda hesaplanır; konumun bunun için hiçbir servise gitmez.</p>
-<p><strong>Bilgisayar köprüsü (isteğe bağlı):</strong> köprüyü açtığında yazdıkların ve Lala'nın yanıtları, aynı
-Wi-Fi üzerinden <strong>şifrelenmeden</strong> kendi bilgisayarındaki tarayıcıya gider; internete çıkmaz. Aynı ağdaki
-başka biri bu trafiği görebilir; köprüyü yalnız güvendiğin ağda aç. Köprü yalnız Lala ekrandayken açık kalır (Lala'dan
-çıkınca ya da telefon kilitlenince bir dakika içinde kapanır); bildirim, ekran, pano ve e-posta içeriği köprüden
-gönderilmez.</p>
 
 <h2>6. İzinler</h2>
 <p>Lala her izni yalnız ilgili işi istediğinde ister; vermediğin izin yalnız o işi kapatır.</p>
@@ -169,15 +184,23 @@ gönderilmez.</p>
     internet aramalarını sesle cevaplama / reddetme (arama bildirimindeki düğmeyle). İçerik telefonda kalır.</li>
   <li><strong>Erişilebilirlik hizmeti (isteğe bağlı):</strong> ekrandaki yazıyı sorduğunda okuma; senin komutunla
     başka uygulamada düğmeye ya da satıra basma (WhatsApp'ta gönder veya sohbete gir, arama sonucuna gir, harita
-    etiketi, ayar anahtarı). Ekran içeriği telefonda kalır; yalnız yukarıdaki ekran sorusu iznini verdiysen ve
+    etiketi, ayar anahtarı) ve söylediğin alana söylediğin yazıyı yazma ("arama kutusuna kahve yaz"; parola ve kod
+    alanlarına asla). Lala yalnız senin söylediğin adımı yapar, kendi başına adım seçmez. Yazı vermeyen ekranlarda (oyun,
+    harita) yalnız sen istediğinde ekran görüntüsü alınır; görüntüdeki yazı telefonda okunur, görüntü kaydedilmez ve
+    hiçbir yere gönderilmez. Ekran içeriği telefonda kalır; yalnız yukarıdaki ekran sorusu iznini verdiysen ve
     telefonda model yokken kısa özeti buluta gider.</li>
   <li><strong>Kamera (isteğe bağlı):</strong> yalnız "Canlı kamera"yı açarsan. Görüntü telefondaki modelle işlenir ve
     kaydedilmez; tek istisna canlı konuşma iznini verdiysen buluttaki canlı kameradır (3. bölüm).</li>
+  <li><strong>Kullanım erişimi (isteğe bağlı):</strong> yalnız Bağlam hafızasında "Uygulama kullanımı"nı açarsan;
+    ekran süresi için uygulama adı ve süre okunur, telefonda kalır.</li>
+  <li><strong>Health Connect, adım ve uyku okuma (isteğe bağlı):</strong> yalnız Bağlam hafızasında "Adım ve uyku"yu
+    açarsan; Samsung Health gibi uygulamaların Health Connect'e yazdığı adım ve uyku okunur, telefonda kalır.</li>
 </ul>
 
 <h2>7. Saklama ve silme</h2>
 <ul>
-  <li>Sohbet turları 30 gün, hassas turlar 10 dakika, eylem kaydı 30 gün, yol tarifi geçmişi 90 gün saklanır.</li>
+  <li>Sohbet turları 30 gün, hassas turlar 10 dakika, eylem kaydı 30 gün, yol tarifi geçmişi ve bağlam hafızası 90 gün
+    saklanır. Bağlam hafızasının her kaynağı kendi sayfasında ayrıca silinir.</li>
   <li>Tek bir sohbeti Sohbet geçmişi'nden, hakkındaki bir bilgiyi ya da notu Hakkımda'dan silebilirsin.</li>
   <li><strong>Ayarlar › Gizlilik ve veriler › Tüm verileri sil</strong> telefondaki bütün Lala verisini siler ve bulut
     iznini geri alır.</li>
@@ -205,7 +228,7 @@ yeniden ister.</p>
 <!-- ───────────────────────────── ENGLISH ───────────────────────────── -->
 <article id="en" lang="en">
 <h1>Lala Privacy Policy</h1>
-<p class="meta"><strong>Last updated:</strong> 1 November 2026</p>
+<p class="meta"><strong>Last updated:</strong> 2 November 2026</p>
 <p class="meta"><strong>Data controller:</strong> PolatTech (developer of the Lala Android app), Türkiye</p>
 <p class="meta"><strong>Contact:</strong> <a href="mailto:yusufplt0109@gmail.com">yusufplt0109@gmail.com</a></p>
 <p class="meta">This is a translation. If the two versions differ, the Turkish version prevails.</p>
@@ -229,8 +252,25 @@ Android Keystore):</p>
   <li>Reminders, alarms, routines, shopping list, habits, flashcards and study timers.</li>
   <li>Saved places (label, address, coordinates) and the history of directions Lala started (90 days).</li>
   <li>A log of actions Lala performed on your behalf (30 days): Settings › Privacy and data › Action history.</li>
-  <li>Connector (webhook) addresses; their authorization headers are kept separately in encrypted preferences.</li>
+  <li>Connector (Home Assistant, Notion, web service, SSH server) addresses, request and command templates, trigger
+    phrases and the SSH server fingerprint pinned on first connection. Access keys, extra headers and this phone's SSH
+    key are kept separately in encrypted preferences; the private half of the SSH key never leaves the phone.</li>
+  <li>Context memory (each source is switched on separately, all off by default; 90 days): places seen while you use
+    Lala (the centre of a roughly 200-metre area; location is never read in the background), which apps you use and
+    for how long each day (app name and duration; no content), daily steps and sleep times from Health Connect, the
+    number of notifications per hour (no app names, no content), and the routine Lala works out from these on the
+    phone (frequent places, working hours, average sleep, steps and screen time).</li>
 </ul>
+<p>Context memory is never sent to any server, cloud AI or analytics service. If you turn on the morning summary (off
+by default; asked once the first time you connect headphones), between 08:00 and 11:00 Lala reads your next calendar
+event, the travel time to allow and your sleep aloud, through the headphones only, when you put them on; travel time is
+a straight-line estimate from your saved "Home", without traffic data.</p>
+<p><strong>Health Connect data:</strong> Lala only READS step counts and the start and end of sleep sessions from
+Health Connect; it never writes to Health Connect. This data is used only to show it to you in the morning summary and
+on the Context memory page, is kept encrypted on the phone for 90 days, and is never shared, sold, sent to the cloud,
+or used for advertising, credit, insurance or employment decisions. You can delete it in Settings › Privacy and data ›
+Context memory and revoke access in Health Connect. Lala reads it only while the app is open and does not request
+background access.</p>
 <p>Replies containing notification, screen, clipboard or email content are kept for at most 10 minutes and then
 deleted. Lala keeps no copy of your notes: a note is handed to your phone's notes app.</p>
 <p>The AI model runs on your phone. If you choose to download the model, the file comes from Hugging Face, which sees
@@ -297,7 +337,10 @@ answer knowledge questions; it only carries out commands.</p>
     <tr><td>"Play … on YouTube"</td><td>The search phrase</td><td>YouTube</td></tr>
     <tr><td>If you connected your Google account</td><td>Gmail reading and drafts, Tasks requests</td><td>Google (email content is processed on the phone and never sent to the cloud model; Lala stores no tokens)</td></tr>
     <tr><td>If you connected Google Home</td><td>On, off, brightness, temperature commands</td><td>Google</td></tr>
-    <tr><td>You run a connector</td><td>The request you defined (with your confirmation every time)</td><td>The HTTPS address you entered</td></tr>
+    <tr><td>You run a connector (with your confirmation every time)</td><td>The request you defined and the value you
+      said (e.g. the task to add to Notion); for SSH, the command you saved. The reply and command output stay on the
+      phone and are not sent to the cloud model</td><td>The HTTPS address you entered (Home Assistant included; Lala does not connect over
+      unencrypted http); for SSH, your server (encrypted connection)</td></tr>
     <tr><td>Translation, text and QR code recognition from images</td><td>No text or images are sent; the library's usage and performance metrics are</td><td>Google (ML Kit)</td></tr>
     <tr><td>If you turned on anonymous usage data (off by default)</td><td>Crash reports and usage events without personal data</td><td>Google (Firebase)</td></tr>
   </tbody>
@@ -306,11 +349,6 @@ answer knowledge questions; it only carries out commands.</p>
 <p>Photos, text read from photos, and the description the on-phone model gives when you ask "what's in this photo"
 are processed only on your phone. Travel-time estimates are computed on the phone; your location is not sent to any
 service for them.</p>
-<p><strong>Computer bridge (optional):</strong> when you turn on the bridge, what you type and Lala's replies travel
-<strong>unencrypted</strong> over the same Wi-Fi network to the browser on your own computer; they do not go to the
-internet. Someone else on the same network could see this traffic, so use the bridge only on a network you trust. The
-bridge stays on only while Lala is on screen (it closes within a minute after you leave Lala or lock the phone);
-notification, screen, clipboard and email content is never sent over the bridge.</p>
 
 <h2>6. Permissions</h2>
 <p>Lala asks for each permission only when a related task needs it; a permission you deny only disables that task.</p>
@@ -327,16 +365,23 @@ notification, screen, clipboard and email content is never sent over the bridge.
     stays on the phone.</li>
   <li><strong>Accessibility service (optional):</strong> reading on-screen text when you ask; pressing a button or row
     in another app on your command (send or open a chat in WhatsApp, open a search result, map labels, settings
-    toggles). Screen content stays on the phone; only a short summary goes to the cloud, and only if you granted the
+    toggles); typing the text you said into the field you named ("type coffee in the search box"; never into password
+    or code fields). Lala only carries out the step you asked for and never picks steps on its own. On screens that
+    expose no text (games, maps), a screenshot is taken only when you ask; its text is read on the phone, and the image
+    is not saved or sent anywhere. Screen content stays on the phone; only a short summary goes to the cloud, and only if you granted the
     screen-question consent above and no on-phone model is available.</li>
   <li><strong>Camera (optional):</strong> only if you open "Live camera". Images are processed by the on-phone model
     and not saved; the only exception is the cloud live camera if you granted live-conversation consent (section 3).</li>
+  <li><strong>Usage access (optional):</strong> only if you turn on "App usage" in Context memory; app names and
+    durations are read for screen time and stay on the phone.</li>
+  <li><strong>Health Connect, read steps and sleep (optional):</strong> only if you turn on "Steps and sleep" in Context
+    memory; steps and sleep written to Health Connect by apps such as Samsung Health are read and stay on the phone.</li>
 </ul>
 
 <h2>7. Retention and deletion</h2>
 <ul>
   <li>Chat turns are kept for 30 days, sensitive turns for 10 minutes, the action log for 30 days, and directions
-    history for 90 days.</li>
+    history and context memory for 90 days. Each context memory source can also be deleted on its own page.</li>
   <li>You can delete a single conversation in Chat history, and a detail or note about you in "About me".</li>
   <li><strong>Settings › Privacy and data › Delete all data</strong> deletes all Lala data on the phone and withdraws
     cloud consent.</li>
