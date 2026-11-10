@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  Home Assistant IndieAuth istemci sayfası. Home Assistant bu sayfanın İLK 10 KB'ını okur ve
+  aşağıdaki bağlantı etiketini arar: bildirilmezse lala://ha-auth adresine yönlendirmeyi
+  reddeder. Etiketi silmeyin ve sayfayı 10 KB altında tutun. (Bu açıklamada etiketin kendisi
+  yazılmaz: sayfayı okuyan ayrıştırıcı iki kez görmesin.)
+
+  Bu adres uygulamada sabittir: HaAuth.CLIENT_ID
+  (app/src/main/java/com/yusufpolat/lala/connections/ha/HaAuth.kt). Adres değişirse ikisi
+  birlikte değişmeli.
+-->
+<link rel="redirect_uri" href="lala://ha-auth">
+<title>Lala · Home Assistant bağlantısı</title>
+<meta name="description" content="Lala Android uygulamasının Home Assistant bağlantısı için istemci sayfası.">
+<style>
+  :root {
+    --bg: #f7f7f9; --fg: #1b1c22; --muted: #5a5d6b; --line: #dcdde5; --accent: #5b48e0; --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #15161b; --fg: #e8e8ee; --muted: #a3a5b3; --line: #2e3039; --accent: #a594ff; --card: #1d1e25; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.5rem; margin: 0 0 8px; }
+  h2 { font-size: 1.05rem; margin: 28px 0 8px; }
+  p { margin: 0 0 12px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+  .muted { color: var(--muted); font-size: 0.92rem; }
+  code { background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 1px 5px; font-size: 0.92em; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Lala · Home Assistant bağlantısı</h1>
+  <p class="muted">Bu sayfa Lala Android uygulamasının Home Assistant istemci kimliğidir.</p>
+
+  <div class="card">
+    <p>
+      Lala'da <strong>Ayarlar › Bağlantılar › Bağlayıcı ekle › Home Assistant</strong> yolundan
+      “Tek dokunuşla bağlan”a dokunduğunda, kendi Home Assistant sunucunun giriş sayfası açılır.
+      Giriş yaptıktan sonra Home Assistant seni <code>lala://ha-auth</code> adresiyle uygulamaya
+      geri gönderir; bu sayfa yalnız o adresin Lala'ya ait olduğunu bildirmek için vardır.
+    </p>
+  </div>
+
+  <h2>Veriler nereye gider?</h2>
+  <p>
+    Giriş bilgilerin yalnız senin Home Assistant sunucuna gider; bu sayfa hiçbir veri toplamaz,
+    çerez kullanmaz ve betik çalıştırmaz. Lala, girişin karşılığında aldığı erişim anahtarını
+    telefonunda şifreli olarak saklar; anahtar buluta ya da bize gönderilmez.
+  </p>
+  <p>
+    Anahtarı dilediğin zaman Home Assistant'ta <strong>Profilim › Güvenlik › Uzun ömürlü erişim
+    anahtarları</strong> bölümünden iptal edebilirsin; Lala'da da bağlayıcıyı silmek anahtarı
+    telefondan siler.
+  </p>
+
+  <h2>İngilizce / English</h2>
+  <p class="muted">
+    This page is the IndieAuth client identifier for the Lala Android app. It declares
+    <code>lala://ha-auth</code> as the app's redirect URI so that your own Home Assistant instance
+    can return the authorization code to the app. The page collects no data, sets no cookies and
+    runs no scripts. The access token Lala receives is stored encrypted on your phone only.
+  </p>
+
+  <p class="muted">
+    Gizlilik politikası: <a href="./">yupol02.github.io/lala-privacy</a>
+  </p>
+</main>
+</body>
+</html>
